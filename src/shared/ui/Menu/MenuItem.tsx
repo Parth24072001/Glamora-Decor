@@ -17,15 +17,7 @@ const variants = {
   },
 };
 
-const MenuItems = [
-  "home ",
-  "About Us",
-  "Services",
-  "Portfolio",
-  "career",
-  "blog",
-  "contact",
-];
+const MenuItems = ["home ", "About Us", "Services", "contact"];
 
 export const MenuItem = ({ i }: { i: any }) => {
   return (
@@ -39,3 +31,10 @@ export const MenuItem = ({ i }: { i: any }) => {
     </motion.li>
   );
 };
+
+<motion.image
+  className="framer_li"
+  variants={variants}
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+></motion.image>;

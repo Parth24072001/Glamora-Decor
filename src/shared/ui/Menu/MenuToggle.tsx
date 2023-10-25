@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { motion } from "framer-motion";
 
 const Path = (props: any) => (
@@ -10,8 +11,21 @@ const Path = (props: any) => (
   />
 );
 
-export const MenuToggle = ({ toggle }: { toggle: any }) => (
-  <button onClick={toggle} className="framer_button">
+export const MenuToggle = ({
+  toggle,
+  isOpen,
+}: {
+  toggle: any;
+  isOpen: boolean;
+}) => (
+  <motion.button
+    onClick={toggle}
+    className={clsx("framer_button", {
+      "open_button !pointer-events-auto": isOpen,
+    })}
+    initial={{ opacity: 0, x: -1500 }}
+    animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+  >
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{
@@ -34,5 +48,5 @@ export const MenuToggle = ({ toggle }: { toggle: any }) => (
         }}
       />
     </svg>
-  </button>
+  </motion.button>
 );

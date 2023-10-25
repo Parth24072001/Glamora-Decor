@@ -4,20 +4,58 @@
 
 @import "../font/font.css";
 
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.body-overlay::after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.25s ease, visibility 0s ease;
+  pointer-events: none;
+}
+
 body {
   font-family: "Plus Jakarta Sans";
   font-weight: normal;
+  background-color: #f3f4f6;
 }
 .container {
-  @apply max-w-[1800px] px-4 mx-auto w-full;
+  @apply max-w-[1600px]  mx-auto w-full;
 }
 
 /* navbar css */
 .navbar {
-  @apply max-h-[120px] h-full py-[10px] pl-[20px] bg-white;
+  @apply max-h-[120px] h-full py-[10px] pl-[20px];
 }
 .nav_logo {
   @apply h-[69px] w-auto select-none;
+}
+.sidebar_logo {
+  @apply h-[100px];
 }
 
 .menu_bar li {
@@ -49,7 +87,9 @@ body {
 .menu_logo {
   @apply h-full;
 }
-
+.opacity_logo {
+  opacity: 0.3 !important;
+}
 .menu_bar li:hover {
   @apply text-golden;
   transition: all 0.4s ease;
@@ -67,6 +107,7 @@ body {
   cursor: pointer;
   width: 50px;
   height: 50px;
+  z-index: 30;
   border-radius: 50%;
   background: transparent;
 }
@@ -74,21 +115,39 @@ body {
   stroke: rgb(224, 180, 89);
   fill: rgb(224, 180, 89);
 }
+.open_button svg path {
+  stroke: white;
+}
 
 .framer_ul {
+  height: 100vh;
+  padding-top: 80px !important;
+  padding-left: 30px !important;
+  width: 460px;
   padding: 25px;
   position: absolute;
-  top: 100px;
+  top: 0px;
   right: 0;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 0px);
+  @apply maxMd:w-[320px];
+}
+.sidebar_image {
+  overflow: scroll;
+  height: 100vh;
+  width: 460px;
+  padding: 25px;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  @apply maxMd:w-[320px];
 }
 
 .framer_li {
-  @apply list-none flex items-center cursor-pointer p-[10px] text-[18px] uppercase;
+  @apply list-none flex items-center cursor-pointer p-[10px] text-[16px] uppercase;
 }
-.framer_li:hover {
+/* .framer_li:hover {
   @apply bg-golden;
-}
+} */
 
 .icon-placeholder {
   @apply w-40 h-40 rounded-full flex-shrink-0 mr-20;
@@ -100,4 +159,34 @@ body {
 
 .refresh {
   @apply absolute p-10 bg-opacity-40 bg-black rounded-2xl w-20 h-20 top-10 right-10 flex justify-center items-center cursor-pointer;
+}
+
+.info svg {
+  @apply w-8 h-8 -ml-[5px];
+}
+.info2 svg {
+  @apply w-6 h-6 max-w-[24px];
+}
+.info2 svg path {
+  @apply stroke-golden;
+}
+
+.info svg path {
+  @apply stroke-golden;
+}
+.info,
+.info2 {
+  @apply flex justify-start items-center gap-[15px];
+}
+
+.social_icon svg {
+  @apply w-[20px] h-[20px] cursor-pointer;
+}
+
+.social_icon svg path {
+  @apply fill-white;
+}
+
+.social_icon:hover svg path {
+  @apply fill-golden;
 }
