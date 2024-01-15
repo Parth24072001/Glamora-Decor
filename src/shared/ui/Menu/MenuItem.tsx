@@ -17,19 +17,7 @@ const variants = {
   },
 };
 
-<<<<<<< HEAD
 const MenuItems = ["home ", "About Us", "Services", "contact"];
-=======
-const MenuItems = [
-  "home ",
-  "About Us",
-  "Services",
-  "Portfolio",
-  "career",
-  "blog",
-  "contact",
-];
->>>>>>> a108a58f36224a732ef4170b9625727c2873a9b8
 
 export const MenuItem = ({ i }: { i: any }) => {
   return (
@@ -43,7 +31,6 @@ export const MenuItem = ({ i }: { i: any }) => {
     </motion.li>
   );
 };
-<<<<<<< HEAD
 
 <motion.image
   className="framer_li"
@@ -51,5 +38,3 @@ export const MenuItem = ({ i }: { i: any }) => {
   whileHover={{ scale: 1.1 }}
   whileTap={{ scale: 0.95 }}
 ></motion.image>;
-=======
->>>>>>> a108a58f36224a732ef4170b9625727c2873a9b8

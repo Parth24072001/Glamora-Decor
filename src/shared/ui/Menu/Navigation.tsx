@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
-<<<<<<< HEAD
 import clsx from "clsx";
 import logo from "../../../assets/icons/apple-touch-icon.png";
 import image1 from "../../../assets/images/1.jpg";
@@ -17,8 +16,6 @@ import Linkedin from "../../../assets/icons/linkedin.svg?react";
 
 import { useWindowSize } from "usehooks-ts";
 import { Link } from "react-router-dom";
-=======
->>>>>>> a108a58f36224a732ef4170b9625727c2873a9b8
 
 const variants = {
   open: {
@@ -29,7 +26,6 @@ const variants = {
   },
 };
 
-<<<<<<< HEAD
 const variantsImage = {
   open: {
     y: 0,
@@ -211,14 +207,3 @@ export const Navigation = ({ isOpen }: { isOpen: boolean }) => {
     </>
   );
 };
-=======
-export const Navigation = () => (
-  <motion.ul variants={variants} className="framer_ul">
-    {itemIds.map((i) => (
-      <MenuItem i={i} key={i} />
-    ))}
-  </motion.ul>
-);
-
-const itemIds = [0, 1, 2, 3, 4];
->>>>>>> a108a58f36224a732ef4170b9625727c2873a9b8
