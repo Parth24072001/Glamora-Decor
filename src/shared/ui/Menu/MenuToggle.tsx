@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import clsx from "clsx";
-=======
->>>>>>> a108a58f36224a732ef4170b9625727c2873a9b8
 import { motion } from "framer-motion";
 
 const Path = (props: any) => (
@@ -14,7 +11,6 @@ const Path = (props: any) => (
   />
 );
 
-<<<<<<< HEAD
 export const MenuToggle = ({
   toggle,
   isOpen,
@@ -30,10 +26,6 @@ export const MenuToggle = ({
     initial={{ opacity: 0, x: -1500 }}
     animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
   >
-=======
-export const MenuToggle = ({ toggle }: { toggle: any }) => (
-  <button onClick={toggle} className="framer_button">
->>>>>>> a108a58f36224a732ef4170b9625727c2873a9b8
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{
@@ -56,9 +48,5 @@ export const MenuToggle = ({ toggle }: { toggle: any }) => (
         }}
       />
     </svg>
-<<<<<<< HEAD
   </motion.button>
-=======
-  </button>
->>>>>>> a108a58f36224a732ef4170b9625727c2873a9b8
 );
