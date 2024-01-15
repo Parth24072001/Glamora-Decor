@@ -21,7 +21,10 @@ export default {
       },
       colors: {
         golden: "#e0b459",
+<<<<<<< HEAD
         grey: "#535353",
+=======
+>>>>>>> a108a58f36224a732ef4170b9625727c2873a9b8
       },
       boxShadow: {
         cardShadow: "3px 3px 20px rgba(0, 0, 0, 0.18)",
