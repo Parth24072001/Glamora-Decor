@@ -2,11 +2,11 @@ import { useState } from "react";
 
 import ExploreCard from "./ExploreCard";
 import { motion } from "framer-motion";
-import image1 from "../../assets/images/5.jpg";
-import image2 from "../../assets/images/6.jpg";
-import image3 from "../../assets/images/7.jpg";
-import image4 from "../../assets/images/8.jpg";
-import image5 from "../../assets/images/9.jpg";
+import image1 from "../../assets/images/19.jpg";
+import image2 from "../../assets/images/10.jpeg";
+import image3 from "../../assets/images/17.jpg";
+import image4 from "../../assets/images/11.jpeg";
+import image5 from "../../assets/images/20.jpeg";
 
 const Hero = () => {
   const exploreWorlds = [

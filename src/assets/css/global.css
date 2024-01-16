@@ -42,7 +42,7 @@ body {
 }
 
 .container {
-  @apply max-w-[1600px] mx-auto w-full;
+  @apply max-w-[1800px] mx-auto w-full bg-gray-100 dark:bg-gray-800;
 }
 
 /* navbar css */
@@ -75,8 +75,8 @@ body {
   left: 0;
   right: auto;
   bottom: -10px;
-  background-color: rgb(224, 180, 89);
   transition: all 0.4s ease;
+  @apply bg-blue-400
 }
 .menu_bar li:hover span::before {
   @apply w-full;
@@ -89,7 +89,7 @@ body {
   opacity: 0.3 !important;
 }
 .menu_bar li:hover {
-  @apply text-golden;
+  @apply text-blue-400;
   transition: all 0.4s ease;
 }
 
@@ -110,8 +110,8 @@ body {
   background: transparent;
 }
 .framer_button:hover svg path {
-  stroke: rgb(224, 180, 89);
-  fill: rgb(224, 180, 89);
+  @apply fill-blue-400 stroke-blue-400
+
 }
 .open_button svg path {
   stroke: white;
@@ -166,11 +166,12 @@ body {
   @apply w-6 h-6 max-w-[24px];
 }
 .info2 svg path {
-  @apply stroke-golden;
+  @apply stroke-blue-400;
+  
 }
 
 .info svg path {
-  @apply stroke-golden;
+  @apply stroke-blue-400;
 }
 .info,
 .info2 {
@@ -186,5 +187,5 @@ body {
 }
 
 .social_icon:hover svg path {
-  @apply fill-golden;
+  @apply fill-blue-400;
 }
