@@ -1,5 +1,3 @@
-import React from "react";
-
 const Blog = () => {
   return (
     <section className="flex items-center bg-gray-100 lg:h-screen dark:bg-gray-800">
